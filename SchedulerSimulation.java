@@ -151,7 +151,9 @@ class Process implements Runnable {
 }
 
 public class SchedulerSimulation {
-    public static void main(String[] args) {
+    // feautre 2
+    private static int contextSwitchCount = 0;
+        public static void main(String[] args) {
         int studentID = 444052197;  
         
         Random random = new Random(studentID);
@@ -244,6 +246,8 @@ public class SchedulerSimulation {
             System.out.println(Colors.BOLD + Colors.MAGENTA + "└" + "─".repeat(79) + Colors.RESET + "\n");
             
             // Start the thread, which will run the process for one time quantum
+            //feature 2
+            contextSwitchCount++;
             currentThread.start();
             
             try {
@@ -252,7 +256,7 @@ public class SchedulerSimulation {
             } catch (InterruptedException e) {
                 System.out.println("Main thread interrupted.");
             }
-            
+
             // Retrieve the process associated with the thread from the map
             Process process = processMap.get(currentThread);
             
@@ -283,7 +287,11 @@ public class SchedulerSimulation {
         System.out.println(Colors.BOLD + Colors.BRIGHT_GREEN + 
                           "╚════════════════════════════════════════════════════════════════════════════════╝" + 
                           Colors.RESET + "\n");
+      // Feature 2
+        System.out.println(Colors.BOLD + Colors.CYAN + "  🔄 Total Context Switches: " + 
+                          Colors.BRIGHT_YELLOW + contextSwitchCount + Colors.RESET + "\n");                    
     }
+
     
     // Method to add a process to the queue and map, while printing a "ready" message
     public static void addProcessToQueue(Process process, Queue<Thread> processQueue, 
