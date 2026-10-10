@@ -29,17 +29,17 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [Write your full name here] |
-| **Student ID** | [Write your student ID here] |
-| **University Email** | [yourid]@std.psau.edu.sa |
-| **GitHub Username** | [your-github-username] |
-| **Repository Link** | [Paste your repository link here] |
+| **Full Name** | [Naif mousa almousa] |
+| **Student ID** | [444052197] |
+| **University Email** | 444052197@std.psau.edu.sa |
+| **GitHub Username** | [Naifalmousaa] |
+| **Repository Link** | [https://github.com/Naifalmousaa/OS-Assignment1-Naif-Almousa] |
  
 ---
 
 ## 🎥 Video Link
 
-**Video Link**: [Paste your video link here]
+**Video Link**: [(https://youtu.be/kAELVzXvkR8)]
 
 > ⚠️ **WARNING:** The video must be **publicly accessible** ("Anyone with the link can view") on **Google Drive**, **YouTube (Unlisted or Public)** or any other cloud file-sharing system. A private, restricted or broken link counts as a **missing video (-1 mark)**.
 >
@@ -129,68 +129,68 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
-**What I did**:
+### Entry 1 - [8 october]
+**What I did**:Set up repository and student ID.
 
-**Details**:
+**Details**:Forked the starter repository on GitHub and cloned it.
 
-**Challenges**:
+**Challenges**:Setting up Java extension in VS Code.
 
-**Solution**:
+**Solution**:Downloaded Java Extension Pack and restarted VS Code.
 
-**Time spent**:
-
----
-
-### Entry 2 - [Date and Time]
-**What I did**:
-
-**Details**:
-
-**Challenges**:
-
-**Solution**:
-
-**Time spent**:
+**Time spent**:37 minutes
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**:
+### Entry 2 - [8 october]
+**What I did**:Implemented Feature 1
 
-**Details**:
+**Details**:Added priority variable to Process class.
 
-**Challenges**:
+**Challenges**:Deciding where to place the priority print statement.
 
-**Solution**:
+**Solution**:Updated addProcessToQueue method.
 
-**Time spent**:
-
----
-
-### Entry 4 - [Date and Time]
-**What I did**:
-
-**Details**:
-
-**Challenges**:
-
-**Solution**:
-
-**Time spent**:
+**Time spent**:2 hours
 
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**:
+### Entry 3 - [9 october]
+**What I did**:Implemented Feature 2
 
-**Details**:
+**Details**:Added contextSwitchCount static variable
 
-**Challenges**:
+**Challenges**:Knowing where to put the counter increment
 
-**Solution**:
+**Solution**:Placed contextSwitchCount++ right before calling currentThread.start()
 
-**Time spent**:
+**Time spent**:1.5 hour
+
+---
+
+### Entry 4 - [10 october]
+**What I did**:Implemented Feature 3
+
+**Details**:Added arrivalTime and finishTime in Process class.
+
+**Challenges**:Calculating waiting time correctly.
+
+**Solution**:Subtracted process burst time from total turnaround time.
+
+**Time spent**:4 hours
+
+---
+
+### Entry 5 - [10 october]
+**What I did**:Completed documentation and tested code
+
+**Details**:Checked the whole code and ran it multiple times in terminal.
+
+**Challenges**:Answering technical questions clearly.
+
+**Solution**:Reviewed process lifecycle and Round-Robin concepts.
+
+**Time spent**:45min
 
 ---
 
@@ -211,13 +211,13 @@
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**: [3 days]
 
-**Most challenging part**:
+**Most challenging part**:Understanding how to track finish time and calculate waiting time across multiple execution rounds
 
-**Most interesting learning**:
+**Most interesting learning**:Seeing how Round-Robin scheduling divides CPU time between threads using time quantum
 
-**What I would do differently next time**:
+**What I would do differently next time**:Write my development log entries while coding each feature instead of leaving them to the end
 
 ---
 
@@ -245,7 +245,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[The most challenging part was implementing Feature 3 to calculate the waiting time for each process correctly. Since processes run in multiple rounds, I had to track when each process finishes its execution to set the finish time. Understanding that waiting time is total turnaround time minus burst time took some testing. Saving all processes in a list to show the final summary table was also a new step for me. Overall, testing this feature helped me understand timing logic much better]
 
 ## Question 3: How did you overcome the challenges you faced?
 
@@ -253,7 +253,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[I overcome these challenges by testing small parts of the code step by step instead of changing everything at once. I used simple print statements to check variable values like remaining time and context switch count during execution. Re-reading the starter code comments helped me understand how processQueue and processMap were used. I also checked Round-Robin scheduling rules to make sure my waiting time calculations were correct. Testing each change immediately made it easy to catch and fix errors]
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
@@ -261,7 +261,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[Multithreading concepts are used in many daily applications to keep programs fast and responsive. For example, a web browser uses different threads to load web pages, download files, and handle user clicks at the same time. Media players also use separate threads to decode video, play audio, and respond to control buttons simultaneously. In web servers, threads allow handling multiple user requests at the same time without blocking. Learning multithreading helps in building software that can run background tasks smoothly]
 
 ### Optional: What would you like to learn more about?
 
@@ -293,7 +293,7 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+[A process is an independent program running in its own memory space, while a thread is a lightweight execution unit that shares memory inside a process. In SchedulerSimulation.java, Process is a class holding process data, whereas the actual execution is handled by Java threads using new Thread(process) inside addProcessToQueue(). We used threads because they have much lower creation overhead and allow fast memory sharing within our Java simulation]
 
 ## Question 2: Ready Queue Behavior
 
@@ -305,15 +305,18 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+[When a process does not finish within its time quantum, it yields the CPU and is placed back at the end of the ready queue. In my simulation run, process P1 had a long burst time and was re-queued multiple times before completing. Re-queueing ensures fairness by giving all processes an equal chance to execute without a single process monopolizing the CPU]
 
 Example from my output:
 ```
-[Paste a relevant snippet from your program output here showing a process being re-queued]
+[⏸ P1 completed quantum 2000ms │ Overall progress: [████████░░░░░░░░░░░░] 40%
+     Remaining time: 3000ms
+  ↻ P1 yields CPU for context switch
+  ➕ P1 (Priority: 7) added to ready queue │ Burst time: 5000ms]
 ```
 
 **Explanation of example:**
-[Explain what is happening in the output snippet you pasted.]
+[Process P1 ran for its allowed 2000ms time quantum. Because it still needed 3000ms to complete, it yielded the CPU and was re-added to the ready queue to wait for its next execution turn]
 
 ## Question 3: Thread Lifecycle
 
@@ -323,15 +326,15 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
-1. **New**: [When is P1 in the New state?]
+1. **New**: [P1 is in the New state when created using Thread thread = new Thread process]
 
-2. **Runnable**: [When does P1 become Runnable?]
+2. **Runnable**: [P1 becomes Runnable when added to ready queue and currentThread.start() is called]
 
-3. **Running**: [When is P1 Running?]
+3. **Running**: [P1 enters Running state when the CPU executes the code inside its run() method]
 
-4. **Waiting**: [When and why would a thread be Waiting?]
+4. **Waiting**: [P1 enters Waiting state when Thread.sleep() is called in run(), or main thread waits on join()]
 
-5. **Terminated**: [When is P1 Terminated?]
+5. **Terminated**: [P1 reaches Terminated state when its execution completes and run() method finishes]
 
 ## Question 4: Real-World Applications
 
@@ -341,32 +344,32 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences per example)*
 
-### Example 1 (operating-system level): [Name of scenario]
+### Example 1 (operating-system level): [Operating System CPU Scheduler]
 
 **Description**:
-[Describe the real-world scenario.]
+[An operating system CPU scheduler uses Round-Robin to share CPU execution time among running applications like web browsers, text editors, and background services]
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+[Round-Robin gives every running program an equal time slice, which ensures fairness and keeps the system responsive without allowing a single heavy program to freeze the OS]
 
-### Example 2: [Name of application/scenario]
+### Example 2: [Web Server Request Handling]
 
 **Description**:
-[Describe the real-world scenario or application.]
+[A web server uses threads and Round-Robin time slices to process incoming web requests from multiple client users at the same time]
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+[It prevents large file download requests from blocking quick webpage requests, ensuring fair and predictable response times for all users]
 
 ## Summary
 
 **Key concepts I understood through these questions:**
-1.
-2.
-3.
+1.Difference between Java thread execution and process objects
+2.How Round-Robin scheduling maintains fairness using time quantum
+3.Thread lifecycle states and methods like start(), sleep(), and join()
 
 **Concepts I need to study more:**
-1.
-2.
+1.Advanced thread synchronization and lock methods
+2.Priority preemption scheduling algorithms in real-time operating systems
 
 ---
 
